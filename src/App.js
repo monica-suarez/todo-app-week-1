@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import TodoApp from './components/Todo App/TodoApp'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1>Todo App</h1>
