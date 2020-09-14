@@ -9,8 +9,8 @@ class TodoApp extends React.Component{
             text: '',
             todos: []
         }
-        this.handleClick = this.handleClick.bind(this);
-        this.textUpdate = this.textUpdate.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
+        // this.textUpdate = this.textUpdate.bind(this);
     }
 
     textUpdate = (event) =>{
