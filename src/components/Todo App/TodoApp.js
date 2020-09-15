@@ -35,21 +35,18 @@ class TodoApp extends React.Component{
         
     render() {
         return(
-        <div>
-            <form onSubmit={this.handleClick}>
-                <input value={this.state.text} onChange={this.textUpdate}></input>
-                <button>Add Todo</button>
-                <ul>
-                    {this.state.todos.map((todo, index)=>{
+        <form onSubmit={this.handleClick}>
+            <input value={this.state.text} onChange={this.textUpdate}></input>
+            <button>Add Todo</button>
+            <ul>
+                {this.state.todos.map((todo, index)=>{
                     return <div key={index}className='todo-li'>
                                 <li>{this.state.todos[index]}</li>
                                 <button type='button' onClick={this.removeTodo.bind(this, index)}>Remove Todo</button>
                             </div>
                     })}
-        </ul>
-            </form>
-            
-        </div>
+            </ul>
+        </form>
         )
     }
 }
