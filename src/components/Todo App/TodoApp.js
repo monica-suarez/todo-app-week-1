@@ -5,7 +5,7 @@ class TodoApp extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            isClicked: false,
+            // isClicked: false,
             text: '',
             todos: []
         }
@@ -21,7 +21,7 @@ class TodoApp extends React.Component{
     handleClick = (event) =>{
         event.preventDefault()
         this.setState({
-            isClicked: !this.state.isClicked,
+            // isClicked: !this.state.isClicked,
             todos: [...this.state.todos, this.state.text],
             text: ''
         })
@@ -40,11 +40,11 @@ class TodoApp extends React.Component{
             <button>Add Todo</button>
             <ul>
                 {this.state.todos.map((todo, index)=>{
-                    return <div key={index}className='todo-li'>
+                    return <div key={index} className='todo-li'>
                                 <li>{this.state.todos[index]}</li>
                                 <button type='button' onClick={this.removeTodo.bind(this, index)}>Remove Todo</button>
                             </div>
-                    })}
+                })}
             </ul>
         </form>
         )
